@@ -1,0 +1,18 @@
+<div class="navbar">
+  <%= image_tag "LogoPill.png", alt: "OISTRICKO!", width: 200 %>
+  <div class="links-container">
+    <% if current_page?(root_path) %>
+      <%= link_to "work", root_path, class: "nav-button", id: "work-button-on" %>
+      <%= link_to "about", about_path, class: "nav-button", id: "about-button" %>
+      <%= link_to "contact", contact_path, class: "nav-button", id: "contact-button" %>
+      <% elsif current_page?(about_path) %>
+        <%= link_to "work", root_path, class: "nav-button", id: "work-button" %>
+        <%= link_to "about", about_path, class: "nav-button", id: "about-button-on" %>
+        <%= link_to "contact", contact_path, class: "nav-button", id: "contact-button" %>
+      <% elsif current_page?(contact_path) %>
+        <%= link_to "work", root_path, class: "nav-button", id: "work-button" %>
+        <%= link_to "about", about_path, class: "nav-button", id: "about-button" %>
+        <%= link_to "contact", contact_path, class: "nav-button", id: "contact-button-on" %>
+    <% end %>
+  </div>
+</div>

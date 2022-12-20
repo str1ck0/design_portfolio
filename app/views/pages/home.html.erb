@@ -1,0 +1,16 @@
+<div class="main-container" data-controller="hello">
+  <%= render "shared/navbar" %>
+  <div class="middle-container">
+    <div class="work-container">
+        <%= image_tag "LogoPill.png", alt: "OISTRICKO!", width: 200 %>
+    </div>
+    <div class="list-container">
+      <div class="btn btn-primary" data-action="click->hello#greet">Say Hello</div>
+      <h1 data-hello-target="heading">This is the home page</h1>
+      <%= render "shared/list" %>
+    </div>
+    <button class="btn btn-primary btn-lg" data-controller="disable-button" data-action="click->disable-button#disable"> Click me! </button>
+  </div>
+  <div class="footer">
+  </div>
+</div>
