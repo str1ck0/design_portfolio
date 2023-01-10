@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
+gem 'bootstrap', '~> 5.2', '>= 5.2.3'
+
 # Use Sass to process CSS
 gem "sassc-rails"
 
