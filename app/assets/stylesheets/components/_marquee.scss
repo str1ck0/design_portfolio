@@ -1,0 +1,81 @@
+*{ box-sizing: border-box; }
+
+.wrap {
+  margin: 0 auto;
+  width: 1000px;
+
+  &--text {
+    margin-bottom: 50px;
+    padding: 0 50px;
+    text-align: center;
+  }
+  &--logobar {
+    background-color: green;
+    height: 60px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  margin-left: 0;
+
+  &__item {
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 20px;
+    text-align: center;
+    width: 20%;
+  }
+}
+
+
+
+#scroll-container {
+  border: 3px solid black;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#scroll-text {
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}

@@ -1,16 +1,24 @@
 <div class="navbar">
-  <%= image_tag "LogoPill.png", alt: "OISTRICKO!", width: 220 %>
+  <div>
+    <%= link_to root_path do %>
+      <%= image_tag "LogoPill.png", alt: "OISTRICKO!", width: 220 %>
+    <% end %>
+  </div>
   <div class="links-container">
     <% if current_page?(root_path) %>
-      <%= link_to "work", root_path, class: "nav-button", id: "work-button-on" %>
+      <%= link_to "work", work_path, class: "nav-button", id: "work-button" %>
       <%= link_to "about", about_path, class: "nav-button", id: "about-button" %>
       <%= link_to "contact", contact_path, class: "nav-button", id: "contact-button" %>
+      <% elsif current_page?(work_path) %>
+        <%= link_to "work", work_path, class: "nav-button", id: "work-button-on" %>
+        <%= link_to "about", about_path, class: "nav-button", id: "about-button" %>
+        <%= link_to "contact", contact_path, class: "nav-button", id: "contact-button" %>
       <% elsif current_page?(about_path) %>
-        <%= link_to "work", root_path, class: "nav-button", id: "work-button" %>
+        <%= link_to "work", work_path, class: "nav-button", id: "work-button" %>
         <%= link_to "about", about_path, class: "nav-button", id: "about-button-on" %>
         <%= link_to "contact", contact_path, class: "nav-button", id: "contact-button" %>
       <% elsif current_page?(contact_path) %>
-        <%= link_to "work", root_path, class: "nav-button", id: "work-button" %>
+        <%= link_to "work", work_path, class: "nav-button", id: "work-button" %>
         <%= link_to "about", about_path, class: "nav-button", id: "about-button" %>
         <%= link_to "contact", contact_path, class: "nav-button", id: "contact-button-on" %>
     <% end %>
